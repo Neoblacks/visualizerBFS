@@ -7,7 +7,6 @@ def display_grid(grid, seen):
     for y, row in enumerate(grid):
         for x, cell in enumerate(row):
             color = Fore.WHITE if (x, y) not in seen else Fore.RED if grid[y][x] == "1" else Fore.BLUE if grid[y][x] == '0' else Fore.GREEN
-            # color = Fore.WHITE if (x, y) not in seen else Fore.RED if grid[y][x] == "1" else Fore.BLUE
             print(color + cell, end="")
         print()
 
@@ -21,3 +20,4 @@ for i, line in enumerate(lines):
     if i%5==0 or i==len(lines)-1:
         os.system("clear")
         display_grid(grid, seen)
+        sleep(0.04)
