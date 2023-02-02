@@ -20,4 +20,4 @@ for i, line in enumerate(lines):
     if i%5==0 or i==len(lines)-1:
         os.system("clear")
         display_grid(grid, seen)
-        sleep(0.04)
+        sleep(0.03)
